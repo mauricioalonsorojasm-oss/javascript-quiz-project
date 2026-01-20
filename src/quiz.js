@@ -55,5 +55,45 @@ class Quiz {
         }
       }
 
+      // DAY 2: Development Tasks:
+
+      //1 - Implement method
+      //Filter Questions By Difficulty method:  
+     filterQuestionsByDifficulty(difficulty) {
+    // If difficulty is not 1, 2, or 3 → do nothing
+    if (difficulty !== 1 && difficulty !== 2 && difficulty !== 3) {
+      return;
+    }
+
+    this.questions = this.questions.filter((question) => {
+      return question.difficulty === difficulty;
+    });
+  }
+
+     // 2 - Implemented method
+     // Average Difficulty 
+
+  averageDifficulty() {
+
+  let sum = this.questions.reduce ((acc, questions) => {
+
+    return acc + questions.difficulty;
+  },0);
+
+  const promedio = sum / this.questions.length;
+  return promedio;
+
+
+
 
 }
+
+
+
+
+
+}
+
+
+
+
